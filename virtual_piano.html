@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Keyboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .keys {
+            display: flex;
+            flex-wrap: wrap;
+            left: 50%;
+            top: 50%;
+            margin-top: 300px;
+            justify-content: center;
+        }
+        .whiteKey {
+            width: 33px;
+            height: 130px;
+            background-color: white;
+            border: 1px solid black;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            z-index: 0;
+        }
+
+
+        .blackKey {
+            width: 19px;
+            height: 88px;
+            border: 1px solid black;
+            background-color: black;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin-left: -11px;
+            margin-right: -11px;
+            z-index: 1;
+        }
+        .whiteKey:hover {
+            cursor: pointer;
+        }
+        .blackKey:hover {
+            cursor: pointer;
+        }
+        .whiteKey:active {
+            background-color: lightgray;
+        }
+        .blackKey:active {
+            background-color: lightgray;
+        }
+        .board {
+            position: absolute;
+            width: 1850px;
+            height: 310px;
+            background-color: black;
+            z-index: -100;
+            top: 50%;
+            margin-top: -310px;
+            margin-left: 34px;
+            border-radius: 10px;
+        }
+        .red-line {
+            position: absolute;
+            width: 1783px;
+            height: 3px;
+            background-color: red;
+            z-index: -40;
+            margin-left: 69px;
+            margin-top: 297px;
+        }
+    </style>
+</head>
+<body>
+    <div class="red-line"></div>
+    <div class="board"></div>
+    <div class="container">
+        <div class="keyboard">
+            <div class="keys">
+                <div class="whiteKey" id="w1"></div>
+                <div class="blackKey" id="b1"></div>
+                <div class="whiteKey" id="w2"></div>
+                <div class="whiteKey" id="w3"></div>
+                <div class="blackKey" id="b2"></div>
+                <div class="whiteKey" id="w4"></div>
+                <div class="blackKey" id="b3"></div>
+                <div class="whiteKey" id="w5"></div>
+                <div class="whiteKey" id="w6"></div>
+                <div class="blackKey" id="b4"></div>
+                <div class="whiteKey" id="w7"></div>
+                <div class="blackKey" id="b5"></div>
+                <div class="whiteKey" id="w8"></div>
+                <div class="blackKey" id="b6"></div>
+                <div class="whiteKey" id="w9"></div>
+                <div class="whiteKey" id="w10"></div>
+                <div class="blackKey" id="b7"></div>
+                <div class="whiteKey" id="w11"></div>
+                <div class="blackKey" id="b8"></div>
+                <div class="whiteKey" id="w12"></div>
+                <div class="whiteKey" id="w13"></div>
+                <div class="blackKey" id="b9"></div>
+                <div class="whiteKey" id="w14"></div>
+                <div class="blackKey" id="b10"></div>
+                <div class="whiteKey" id="w15"></div>
+                <div class="blackKey" id="b11"></div>
+                <div class="whiteKey" id="w16"></div>
+                <div class="whiteKey" id="w17"></div>
+                <div class="blackKey" id="b12"></div>
+                <div class="whiteKey" id="w18"></div>
+                <div class="blackKey" id="b13"></div>
+                <div class="whiteKey" id="w19"></div>
+                <div class="whiteKey" id="w20"></div>
+                <div class="blackKey" id="b14"></div>
+                <div class="whiteKey" id="w21"></div>
+                <div class="blackKey" id="b15"></div>
+                <div class="whiteKey" id="w22"></div>
+                <div class="blackKey" id="b16"></div>
+                <div class="whiteKey" id="w23"></div>
+                <div class="whiteKey" id="w24"></div>
+                <div class="blackKey" id="b17"></div>
+                <div class="whiteKey" id="w25"></div>
+                <div class="blackKey" id="b18"></div>
+                <div class="whiteKey" id="w26"></div>
+                <div class="whiteKey" id="w27"></div>
+                <div class="blackKey" id="b19"></div>
+                <div class="whiteKey" id="w28"></div>
+                <div class="blackKey" id="b20"></div>
+                <div class="whiteKey" id="w29"></div>
+                <div class="blackKey" id="b21"></div>
+                <div class="whiteKey" id="w30"></div>
+                <div class="whiteKey" id="w31"></div>
+                <div class="blackKey" id="b22"></div>
+                <div class="whiteKey" id="w32"></div>
+                <div class="blackKey" id="b23"></div>
+                <div class="whiteKey" id="w33"></div>
+                <div class="whiteKey" id="w34"></div>
+                <div class="blackKey" id="b24"></div>
+                <div class="whiteKey" id="w35"></div>
+                <div class="blackKey" id="b25"></div>
+                <div class="whiteKey" id="w36"></div>
+                <div class="blackKey" id="b26"></div>
+                <div class="whiteKey" id="w37"></div>
+                <div class="whiteKey" id="w38"></div>
+                <div class="blackKey" id="b27"></div>
+                <div class="whiteKey" id="w39"></div>
+                <div class="blackKey" id="b28"></div>
+                <div class="whiteKey" id="w40"></div>
+                <div class="whiteKey" id="w41"></div>
+                <div class="blackKey" id="b29"></div>
+                <div class="whiteKey" id="w42"></div>
+                <div class="blackKey" id="b30"></div>
+                <div class="whiteKey" id="w43"></div>
+                <div class="blackKey" id="b31"></div>
+                <div class="whiteKey" id="w44"></div>
+                <div class="whiteKey" id="w45"></div>
+                <div class="blackKey" id="b32"></div>
+                <div class="whiteKey" id="w46"></div>
+                <div class="blackKey" id="b33"></div>
+                <div class="whiteKey" id="w47"></div>
+                <div class="whiteKey" id="w48"></div>
+                <div class="blackKey" id="b34"></div>
+                <div class="whiteKey" id="w49"></div>
+                <div class="blackKey" id="b35"></div>
+                <div class="whiteKey" id="w50"></div>
+                <div class="blackKey" id="b36"></div>
+                <div class="whiteKey" id="w51"></div>
+                <div class="whiteKey" id="w52"></div>
+            </div>
+        </div>
+    </div>
+    <script></script>
+</body>
+</html>
+
